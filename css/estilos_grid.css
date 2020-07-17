@@ -5,41 +5,20 @@ body {
 
 .container {
 
-    /*para poder agregar un grid es necesario especificar 
-    un flex de grid */
+    
     display: grid;
-    /* grid-template-columns: 25% 200px 25%;
-    grid-template-rows: 300px 150px;
- */
-    /*grid-template: filas/columnas; */
-    /* grid-template: 300px 150px 100px / 50% 200px 100px;
-    ahora usaremos fracciones
-    */
-    /* grid-template: 300px 150px 100px / 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4,1fr) ; 
+    /*al nuevo grid le diremos que ocupe 3 columnas y que se expanda al espacio total*/
+    grid-template-rows: repeat(4,1fr) ; 
+    /*al nuevo grid le diremos que ocupe 3 filas y que se expanda al espacio total*/
 
-    /* grid-template: 300px 150px 100px / repeat(4, minmax(200px, 1fr)); */
-    
-    
- /*    grid-template: repeat(3, 1fr) / repeat(2, 1fr);  */
-
-    grid-template: 100px 1fr 150px / 200px 1fr;
-    /*en este caso usaremos 3 filas de 33.33 cada una y 4 columnas del mismo tamaño 33.33
-    esto lo haremos para que ocupe todo el espacio de nuestro navegador  */ 
-
-/*
-    grid-column-gap: 30px;
-    grid-row-gap: 30px; */
     grid-gap: 10px;
     height: 100vh;
 
-    grid-template-areas:
-    
-    "header header"
-    "left contenido"
-    "footer footer";
+   
 }
 
-.header {
+/* .header {
 grid-area: header;
 }
 
@@ -53,24 +32,48 @@ grid-area: contenido;
 
 .footer{
 grid-area: footer;
-}
+} */
 
 
 .item {
     background: lightblue;
-    border: 1px solid red;
     padding: 10px;
+    border: 1px solid red;
    /*  margin-right: 10px;
     margin-bottom: 10px; */
 }
 
-/* .item:nth-of-type(4){
+ .item:nth-of-type(1){
     background: burlywood;
     overflow: auto;
-    display: grid;
-    grid-template: 50px 50px 50px / 100px 100px 100px ;
-} */
-/* 
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+ 
+
+.item:nth-of-type(8){
+    background: burlywood;
+    /* grid-column: 1 / span 2; */
+    grid-column: 1/-1; /* la propiedad de -1 nos ayuda a que ocupe todo el espcio */ 
+}
+
+.item:nth-of-type(7){
+    background: burlywood;
+    grid-column: 2/ 4; 
+}
+
+/* .item:nth-of-type(3){
+    background: burlywood;
+    grid-column: 1/ -1; 
+}
+ */
+
+
+
+
+
+
+/*
 .item .item {
 
 background: yellow;
