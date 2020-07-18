@@ -7,16 +7,23 @@ body {
 
     
     display: grid;
-    grid-template-columns: repeat(7,1fr) ; 
-    /*al nuevo grid le diremos que ocupe 3 columnas y que se expanda al espacio total*/
-    grid-template-rows: repeat(2,1fr) ; 
-    /*al nuevo grid le diremos que ocupe 3 filas y que se expanda al espacio total*/
+    /* grid-template-columns: repeat(7,1fr) ;  */
 
+    grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [destacado-end] 1fr [linea5] 1fr [destacado2-end] 1fr [linea7] 1fr [final]; 
+   
+    grid-template-rows: [inicio] 200px [inicio2] 200px [final] ; 
+    /*al nuevo grid le diremos que ocupe 3 filas y que se expanda al espacio todestacado2-end
    grid-gap: 5px;  
 
    /* lograr une spacio entre columnas */
+    height: 100vh;
 
-    height: 50vh;
+
+  /*   grid-auto-flow: column;
+    grid-auto-columns: 200px; */
+    
+    grid-auto-flow: row;
+    grid-auto-rows: 200px 50px;
 
    
 }
@@ -47,31 +54,33 @@ grid-area: footer;
 }
 
   .item:nth-of-type(1){
-    background: burlywood;
+  /*   background: burlywood;
     overflow: auto;
     grid-column: 1 / span 3;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 2; */
+
+    grid-column: inicio / destacado-end;
+    grid-row: inicio/final;
 }
  
-
 .item:nth-of-type(2){
-    background: burlywood;
+   /*  background: burlywood;
     grid-column: 4 / span 2; /* la propiedad de -1 nos ayuda a que ocupe todo el espcio */ 
     /* grid-column: 1 / span 2; */
-    grid-row: 1 / span 2;
-}
 
-
-.item:nth-of-type(3){
-    background: burlywood;
-    grid-column: 6 / span 2; 
+    grid-column: destacado-end / destacado2-end;
+   grid-row:inicio / final ;
 } 
 
-/* .item:nth-of-type(3){
-    background: burlywood;
+ .item:nth-of-type(3){
+   /* background: burlywood;
     grid-column: 1/ -1; 
+*/
+grid-column: destacado2-end / final;
 }
- */
+
+
+ 
 
 
 
