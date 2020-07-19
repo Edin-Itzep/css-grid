@@ -7,88 +7,38 @@ body {
 
     
     display: grid;
-    /* grid-template-columns: repeat(7,1fr) ;  */
-
-    grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [destacado-end] 1fr [linea5] 1fr [destacado2-end] 1fr [linea7] 1fr [final]; 
-   
-    grid-template-rows: [inicio] 200px [inicio2] 200px [final] ; 
-    /*al nuevo grid le diremos que ocupe 3 filas y que se expanda al espacio todestacado2-end
-   grid-gap: 5px;  
-
-   /* lograr une spacio entre columnas */
+    grid-gap: 5px;  
     height: 100vh;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    justify-items: center;
+    /* alineado de forma vertical
+    y sus propiedades son: start, end, center, stretch  */
+    align-items: center;
+    /* alineado de izquierda a derecha 
+    start, end, center o stretch*/
 
 
-  /*   grid-auto-flow: column;
-    grid-auto-columns: 200px; */
-    
-    grid-auto-flow: row;
-    grid-auto-rows: 200px 50px;
-
+  
    
 }
 
-/* .header {
-grid-area: header;
-}
-
-.left{
-grid-area: left;
-}
-
-.contenido{
-grid-area: contenido;
-}
-
-.footer{
-grid-area: footer;
-} */
 
 
 .item {
     background: lightblue;
     padding: 10px;
     border: 1px solid red;
-   /*  margin-right: 10px;
-    margin-bottom: 10px; */
+   
 }
 
-  .item:nth-of-type(1){
-  /*   background: burlywood;
-    overflow: auto;
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 2; */
-
-    grid-column: inicio / destacado-end;
-    grid-row: inicio/final;
-}
- 
-.item:nth-of-type(2){
-   /*  background: burlywood;
-    grid-column: 4 / span 2; /* la propiedad de -1 nos ayuda a que ocupe todo el espcio */ 
-    /* grid-column: 1 / span 2; */
-
-    grid-column: destacado-end / destacado2-end;
-   grid-row:inicio / final ;
+.item:nth-of-type(5){
+    align-self: star;
+    justify-self: start;
 } 
 
- .item:nth-of-type(3){
-   /* background: burlywood;
-    grid-column: 1/ -1; 
-*/
-grid-column: destacado2-end / final;
-}
-
-
  
 
 
 
 
-
-
-/*
-.item .item {
-
-background: yellow;
-} */
