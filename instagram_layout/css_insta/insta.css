@@ -1,0 +1,61 @@
+
+.body {
+
+    margin: 0; /* eliminamos el margen del body */
+    font-family: arial;
+}
+
+.post {
+    /* para que el cursos este activo siempre
+    en esta pagina */
+    cursor: pointer;  
+    position: relative;
+    width: 200px;
+    display: block;
+}
+
+.post-image {
+    margin: 0; /* el figure por defecto trae un margen
+    asi que eso tenemos que quitarselo */
+}
+
+.post-image img {
+        /* aca le decimos que tenga un 100% del total 
+        que tendra nuestro post padre que aun no lo definimos
+        con el grid  */
+    width: 100%;
+    vertical-align: top;
+}
+
+.post-overlay{
+
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+
+.post:hover  .post-overlay { /* hover significa que al estar
+    sobre el elemento este realizara alguna accion */
+    display: flex;
+}
+
+.post-likes,
+.post-comments{
+width: 80px;
+margin: 5px;
+font-weight: bolder;
+text-align: center;
+display: inline-block;
+}
+
+
+
