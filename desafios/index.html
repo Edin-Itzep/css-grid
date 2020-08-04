@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Platzi Movies</title>
+    <style>
+    
+    @font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?xnbcb2');
+  src:  url('fonts/icomoon.eot?xnbcb2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xnbcb2') format('truetype'),
+    url('fonts/icomoon.woff?xnbcb2') format('woff'),
+    url('fonts/icomoon.svg?xnbcb2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-settings:before {
+  content: "\e900";
+}
+.icon-heart:before {
+  content: "\e901";
+}
+.icon-power:before {
+  content: "\e902";
+}
+.icon-home:before {
+  content: "\e903";
+}
+
+
+    body {
+
+        margin: 0;
+    }
+    .container {
+        display: grid;
+        grid-template-rows: auto 1fr; 
+        grid-template-columns: 90px 1fr;
+        grid-template-areas: "header header"
+                             "menu content";
+
+        height: 100vh;
+
+    }
+    
+    .header
+    {
+        display: grid;
+        grid-template-columns: 90px 1fr 30%;
+        grid-template-areas: "header-logo header-search header-login";
+        grid-area: header;
+        gap: 20px;
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+        
+    }
+
+    .header-logo {
+        grid-area: header-logo;
+        display: flex;
+        align-content: center;
+    }
+
+
+    .search {
+        display: flex;
+        align-items: center;
+    }
+    .header-search {
+        grid-area: header-search;
+        margin: 0 auto;
+        margin-top: 5px;
+        width: 70%;
+       padding: 0;
+       height: 30px;
+       border-radius: 5px;
+    }
+
+    input {
+        text-align: center;
+    }
+
+    .header-login{
+        grid-area: header-login;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .menu {
+        
+        grid-area: menu;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        background: #ff595c;
+        
+    }
+
+    .menu-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        
+    }
+
+    .menu-nav a {
+
+        height: 100px;
+        color: white;
+    }
+    
+       
+    
+
+    .content {
+        grid-area: content;
+       
+        
+
+    }
+
+    .t-recomendados {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        padding: 25px;
+    }
+
+    .pop {
+        width: 75px;
+    
+    
+    }
+
+    .icon-heart{
+        color: white;
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    .icon-power{
+        color: white;
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    .icon-settings{
+        color: white;
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    .icon-home {
+        color: white;
+        font-size: 30px;
+        padding: 5px;
+    }
+   
+
+
+    figure {
+        margin: 0;
+    }
+
+    .content img {
+        width: 100%;
+        height: 100%;
+    }
+    h2 {
+
+        padding: 15px 30px 0;
+        margin: 0;
+    }
+    
+    .tres {
+        display: inline-block;
+    }
+
+    .ajustes a {
+        display: grid;
+        color: white;
+    }
+
+   
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+<header class="header">
+
+<figure class="header-logo">
+    <img  class= "pop" src="logo.png" alt="" >
+</figure>
+
+<div class="search">
+    <input class="header-search" type="search" placeholder="Busca tu pelicula">
+
+</div>
+        <div class="header-login">
+        
+        <h3>Edin Itzep</h3>
+<figure>
+
+    <img src="user.png" alt="" width="50px">
+</figure>
+
+
+
+
+</div>
+
+</header>
+
+<nav class="menu">
+
+    <div class="menu-nav">
+        <i class="icon-home"></i>
+        <a class="tres" href="">Home</a>
+        <i class="icon-power"></i>
+        <a class="tres" href="">Trending </a>
+        <i class="icon-heart"></i>
+        <a class="tres" href="">Likes </a>
+    </div>
+
+    <div class="ajustes">
+        <i class="icon-settings"></i>
+        <a class="tres" href="">Ajustes</a>
+    </div>
+
+</nav>
+
+<section class="anime">
+
+
+
+    <div class="content">
+    
+    <div class="titulo-1">
+        <h2>
+            Recomendados
+        </h2>
+    </div>
+    
+    <div class="t-recomendados">
+        <figure class="ver">
+            <img src="black.jpg" alt="" sizes="" srcset="" width="100px">
+        </figure>
+        <figure class="ver">
+            <img src="jumanji.jpg" alt="" width="100px">
+        </figure>
+        <figure class="ver">
+            <img src="summer.jpg" alt="" width="100px">
+        </figure>
+    
+    </div>
+    <div class="titulo-1">
+        <h2>
+            Estrenos
+        </h2>
+    </div>
+    
+    <div class="t-recomendados">
+        <figure class="ver">
+            <img src="gretel.jpg" alt="" width="100px" sizes="" srcset="">
+        </figure>
+        <figure class="ver">
+            <img src="adios.jpg" alt="" >
+        </figure>
+        <figure class="ver">
+            <img src="wonder.jpg" alt="" width="100px">
+        </figure>
+    
+    </div>
+    <div class="titulo-1">
+        <h2>
+            Series
+        </h2>
+    </div>
+    
+    <div class="t-recomendados">
+        <figure class="ver">
+            <img src="papel.jpg" alt="" sizes="" srcset="" width="100px">
+        </figure>
+        <figure class="ver">
+            <img src="wk.jpg" alt="" width="100px">
+        </figure>
+        <figure class="ver">
+            <img src="vis.jpg" alt="" width="100px">
+        </figure>
+    
+    </div>
+</section>
+
+
+
+
+</div>
+
+
+</div>
+</body>
+</html>
